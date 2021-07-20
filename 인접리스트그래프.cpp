@@ -68,11 +68,11 @@ struct graph { //구조체 정의
 
 		auto n1 = static_cast<int>(c1);
 		auto n2 = static_cast<int>(c2);
-		remove_if(data[n1].begin(), data[n1].end(), [n2](const auto& pair) { //remove_if로 n1행의 모든열을 람다식으로 탐색해서 [n2]을 찾으면 제거
+		remove_if(data[n1].begin(), data[n1].end(), [n2](const auto& pair) { //remove_if로 n1행의 모든열을  탐색해서 [n2]을 찾으면 람다식으로 true로 반환되어 제거
 
 			return pair.first == n2;
 		});
-		remove_if(data[n2].begin(), data[n2].end(), [n1](const auto& pair) {//remove_if로 n2행의 모든열을 람다식으로 탐색해서 [n1]을 찾으면 제거
+		remove_if(data[n2].begin(), data[n2].end(), [n1](const auto& pair) {//remove_if로 n2행의 모든열을 람다식으로 탐색해서 [n1]을 찾으면 람다식으로 true로 반환되어 제거
 
 			return pair.first == n1;
 		});
