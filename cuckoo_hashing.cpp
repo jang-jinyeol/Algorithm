@@ -7,7 +7,7 @@ using namespace std;
 class hash_map {
 
 	size_t n;
-	vector<int>data1;//¸ÕÀú ¼±¾ğÇÏÁö ¾ÊÀ¸¸é ¿À·ù ¹ß»ı
+	vector<int>data1;//ë¨¼ì € ì„ ì–¸í•˜ì§€ ì•Šìœ¼ë©´ ì˜¤ë¥˜ ë°œìƒ
 	vector<int>data2;
 
 	auto hash_fnc(size_t key) {
@@ -21,12 +21,12 @@ class hash_map {
 
 	void Insert2(size_t key, int cnt, int table) {
 
-		if (cnt >= n) { //cnt ¼ö°¡ ÇØ½Ã¸Ê Å©±â¸¸Å­ ¹İº¹µÇ¾ú´Ù¸é Á¾·á
+		if (cnt >= n) { //cnt ìˆ˜ê°€ í•´ì‹œë§µ í¬ê¸°ë§Œí¼ ë°˜ë³µë˜ì—ˆë‹¤ë©´ ì¢…ë£Œ
 
-			cout << "ÀçÇØ½ÌÀÌ ÇÊ¿äÇÕ´Ï´Ù." << endl;
+			cout << "ì¬í•´ì‹±ì´ í•„ìš”í•©ë‹ˆë‹¤." << endl;
 			return;
 		}
-		if (table == 1) { //Å×ÀÌºíÀÌ 1ÀÏ¶§ data1¿¡ »ğÀÔ
+		if (table == 1) { //í…Œì´ë¸”ì´ 1ì¼ë•Œ data1ì— ì‚½ì…
 			auto tmp1=hash_fnc(key);
 			if (data1[tmp1] == -1) {
 				data1[tmp1] = key;
@@ -37,7 +37,7 @@ class hash_map {
 				return Insert2(key, cnt + 1, 2);
 			}
 		}
-		else { //Å×ÀÌºíÀÌ 2ÀÏ¶§ data2¿¡ »ğÀÔ
+		else { //í…Œì´ë¸”ì´ 2ì¼ë•Œ data2ì— ì‚½ì…
 			auto tmp2 = hash_fnc2(key);
 			if (data2[tmp2] == -1) {
 				data2[tmp2] = key;
