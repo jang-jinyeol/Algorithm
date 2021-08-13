@@ -21,6 +21,16 @@ int main(){
 		cout << "\n";
 	}
 
+	vector<vector<int>>::iterator row;
+	vector<int>::iterator col;
+
+	for (row = arr.begin(); row != arr.end(); row++) {
+		for (col = row->begin(); col != row->end(); col++) {
+			cout << *col << " ";
+		}
+		cout << '\n';
+	}
+
 	return 0;
 }
 
