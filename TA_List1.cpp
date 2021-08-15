@@ -41,6 +41,15 @@ int main() {
 	}
 
 	cout << '\n';
+	//중복원소 제거
+	myList.unique();
 
+	cout << ">> nodes of myList: ";
+	for (it = myList.begin(); it != myList.end(); ++it) {
+		cout << *it << " ";
+	}
+	cout << endl;
 
+	return 0;
 }
+
